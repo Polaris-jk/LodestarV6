@@ -1,0 +1,19 @@
+{
+  "name": "Lodestar — Field Notebook",
+  "short_name": "Lodestar",
+  "description": "Geological field GPS and digital field notebook for Geotechnology KKU",
+  "lang": "th",
+  "start_url": "./#/gps",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "categories": ["education", "navigation", "utilities"],
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+    { "src": "icons/lodestar.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

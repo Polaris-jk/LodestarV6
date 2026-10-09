@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <title>Lodestar</title>
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="46%" r="70%">
+      <stop offset="0" stop-color="#1b1d21"/>
+      <stop offset="0.55" stop-color="#0b0c0e"/>
+      <stop offset="1" stop-color="#000"/>
+    </radialGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffe08a"/>
+      <stop offset="0.45" stop-color="#f5c933"/>
+      <stop offset="1" stop-color="#a87412"/>
+    </linearGradient>
+    <linearGradient id="lit" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#f6ecd2"/>
+    </linearGradient>
+    <linearGradient id="shade" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e7c45a"/>
+      <stop offset="1" stop-color="#9c6d14"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#fff7da" stop-opacity="0.95"/>
+      <stop offset="0.25" stop-color="#ffe9a3" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#f5c933" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="dial"><circle cx="256" cy="266" r="163"/></clipPath>
+  </defs>
+
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+
+  <!-- tilted beds inside the dial: the geology -->
+  <g clip-path="url(#dial)" fill="none" stroke-linecap="round">
+    <path d="M70 404 C150 360 230 382 300 352 S420 300 470 300" stroke="#f5c933" stroke-opacity="0.30" stroke-width="12"/>
+    <path d="M70 438 C150 394 230 416 300 386 S420 334 470 334" stroke="#c9cdd2" stroke-opacity="0.20" stroke-width="10"/>
+    <path d="M70 470 C150 426 230 448 300 418 S420 366 470 366" stroke="#f5c933" stroke-opacity="0.16" stroke-width="12"/>
+  </g>
+
+  <!-- dial ring and ticks -->
+  <circle cx="256" cy="266" r="170" fill="none" stroke="url(#gold)" stroke-width="9"/>
+  <g stroke="#ece7d8" stroke-width="7" stroke-linecap="round">
+    <line x1="412" y1="266" x2="436" y2="266"/>
+    <line x1="76" y1="266" x2="100" y2="266"/>
+    <line x1="256" y1="422" x2="256" y2="446"/>
+  </g>
+  <g stroke="#ece7d8" stroke-opacity="0.45" stroke-width="4" stroke-linecap="round">
+    <line x1="376" y1="146" x2="388" y2="134"/>
+    <line x1="136" y1="146" x2="124" y2="134"/>
+    <line x1="376" y1="386" x2="388" y2="398"/>
+    <line x1="136" y1="386" x2="124" y2="398"/>
+  </g>
+
+  <!-- N above the dial -->
+  <path d="M234 82 V30 h12 l22 32 V30 h12 V82 h-12 l-22 -32 V82 z" fill="#f4efe0"/>
+
+  <!-- glow behind the star -->
+  <circle cx="256" cy="266" r="120" fill="url(#glow)"/>
+
+  <!-- diagonal points (shorter) -->
+  <g transform="rotate(45 256 266)">
+    <polygon points="256,170 268,254 256,266" fill="url(#lit)" opacity="0.75"/>
+    <polygon points="256,170 244,254 256,266" fill="url(#shade)" opacity="0.75"/>
+    <polygon points="256,362 244,278 256,266" fill="url(#lit)" opacity="0.75"/>
+    <polygon points="256,362 268,278 256,266" fill="url(#shade)" opacity="0.75"/>
+    <polygon points="352,266 268,278 256,266" fill="url(#lit)" opacity="0.75"/>
+    <polygon points="352,266 268,254 256,266" fill="url(#shade)" opacity="0.75"/>
+    <polygon points="160,266 244,254 256,266" fill="url(#lit)" opacity="0.75"/>
+    <polygon points="160,266 244,278 256,266" fill="url(#shade)" opacity="0.75"/>
+  </g>
+
+  <!-- main four-point star (Polaris): each point split into a lit and a shaded facet -->
+  <polygon points="256,96 276,246 256,266" fill="url(#shade)"/>
+  <polygon points="256,96 236,246 256,266" fill="url(#lit)"/>
+  <polygon points="256,436 236,286 256,266" fill="url(#shade)"/>
+  <polygon points="256,436 276,286 256,266" fill="url(#lit)"/>
+  <polygon points="410,266 276,246 256,266" fill="url(#lit)"/>
+  <polygon points="410,266 276,286 256,266" fill="url(#shade)"/>
+  <polygon points="102,266 236,286 256,266" fill="url(#lit)"/>
+  <polygon points="102,266 236,246 256,266" fill="url(#shade)"/>
+  <circle cx="256" cy="266" r="9" fill="#fffaf0"/>
+</svg>
